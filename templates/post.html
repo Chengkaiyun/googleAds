@@ -4,8 +4,9 @@
 <meta charset="utf-8">
 <title>Google Ads</title>
 </head>
-<body>
+<body >
 
+<h2 style="color:#236b4a">Products for Google Ads Promo</h2>
     <form action="/search-post" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <b>請選擇上傳檔案：</b>
@@ -27,16 +28,20 @@
     </ul>
     {% endif %}
 
-    <table>
-    {% for i in url %}
-    <tr>
-        <td height="55"><img src="{{i.url}}" height="50" onerror="this.parentNode.parentNode.style.color='red'"></td>
-        <td> {{i.handle}} </td>
-        <td> {{i.title}}</td>
-        <td> {{i.sku}}</td>
-    </tr>
-    {% endfor %}
-    </table>
 
+    <div style="width: 100vw; overflow: auto;">
+        <table>
+        {% for i in url %}
+        <tr>
+            <td height="55"><img src="{{i.url}}" height="50" onerror="this.parentNode.parentNode.style.color='red'"></td>
+            <td> {{i.handle}} </td>
+            <td> {{i.title}}</td>
+            <td> {{i.sku}}</td>
+            <td> {{i.price}}</td>
+            <td> {{i.url}} </td>
+        </tr>
+        {% endfor %}
+        </table>
+    </div>
 </body>
 </html>

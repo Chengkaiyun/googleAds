@@ -3,7 +3,6 @@ def initialize():
     global df, new_df
     global sku, designName, productLine, device, caseColor, bumperColor, handle, dashDevice
 
-
     global url_dict, backplate
 
     handle = []

@@ -17,10 +17,13 @@ def makeFile():
             Var.df['Option1 Value'][i] = Var.caseColor[indexColor].replace(" ","_").lower()
 
             # 從表單合併出圖名
-            if (Var.bumperColor[indexColor] != ""):
-                imgName = Var.bumperColor[indexColor] + "_" + Var.sku[indexColor] + "_" + Var.dashDevice[indexColor]
+            if (Var.bumperColor[indexColor].strip() != ""):
+                imgName = "merged-" + Var.bumperColor[indexColor] + "_" + \
+                          Var.sku[indexColor] + "_" + \
+                          Var.dashDevice[indexColor]
             else:
-                imgName = Var.sku[indexColor] + "_" + Var.dashDevice[indexColor]
+                imgName = "merged-" + Var.sku[indexColor] + "_" + \
+                          Var.dashDevice[indexColor]
 
             # 放新圖片URL
             url = Var.url_dict[Var.country] + imgName + ".png"
@@ -30,7 +33,7 @@ def makeFile():
             # Mod 要改價錢 + SEO
             if ("mod-nx" in Var.df['Handle'][i]):
                 BumperPrice = Var.countryInfo[Var.country][0]
-                Var.df['Variant Price'][i] = float(Var.df['Variant Price'][i]) + float(BumperPrice)
+                Var.df['Variant Price'][i] = round(Var.df['Variant Price'][i] + float(BumperPrice),2)
 
                 SEO = Var.countryInfo[Var.country][1]
                 Var.df['SEO Description'][i] = SEO
@@ -42,6 +45,12 @@ def makeFile():
             # Airpods 要 + SEO
             if ("airpods-case" in Var.df['Handle'][i]):
                 SEO = Var.countryInfo[Var.country][2]
+                Var.df['SEO Description'][i] = SEO
+                Var.df['Body (HTML)'][i] = SEO
+
+            # SSA 要 + SEO
+            if ("airpods-case" in Var.df['Handle'][i]):
+                SEO = Var.countryInfo[Var.country][3]
                 Var.df['SEO Description'][i] = SEO
                 Var.df['Body (HTML)'][i] = SEO
 

@@ -68,9 +68,10 @@ def search_post(request):
         handle = Var.new_df['Handle'].tolist()
         title = Var.new_df['Title'].tolist()
         sku = Var.new_df['Variant SKU'].tolist()
+        price = Var.new_df['Variant Price'].tolist()
         imgUrl = []
         for i in range(len(url)):
-            imgUrl.append({"url": url[i], "handle": handle[i], "title": title[i], "sku": sku[i]})
+            imgUrl.append({"url": url[i], "handle": handle[i], "title": title[i], "sku": sku[i], "price": price[i]})
 
         return render(request, "post.html", {"url": imgUrl})
 
