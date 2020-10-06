@@ -37,5 +37,3 @@ def makeHandle():
 
         #  從表單合併出 device
         Var.dashDevice.append(tempDevice.replace(' ','-').lower())
-
-    print(Var.handle)
