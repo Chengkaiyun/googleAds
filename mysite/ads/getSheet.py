@@ -13,7 +13,7 @@ SCOPES = ['https://www.googleapis.com/auth/spreadsheets', "https://www.googleapi
 store = file.Storage('credentials.json')
 creds = store.get()
 if not creds or creds.invalid:
-    JSON_FILE = os.path.join(Settings.BASE_DIR, 'client_secret.json')
+    JSON_FILE = os.path.join(Settings.BASE_DIR, "client_secret.json")
     print(JSON_FILE)
     flow = client.flow_from_clientsecrets(JSON_FILE, SCOPES)
     creds = tools.run_flow(flow, store)
