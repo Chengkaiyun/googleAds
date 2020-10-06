@@ -25,22 +25,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1093f355-2f84-4cb4-923f-4f6128435efd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ads/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads/client_secret.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads/copy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads/fillFile.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads/getSheet.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads/globals.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads/makeFile.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads/makeHandle.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ads/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/post.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/token.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Desktop.ini" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/credentials.json" beforeDir="false" />
