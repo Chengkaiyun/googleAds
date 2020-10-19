@@ -1,5 +1,8 @@
 import pandas as pd
 import ads.globals as Var
+import mysite.settings as Settings
+import pandas as pd
+import os
 
 def makeFile():
     global indexColor
@@ -70,6 +73,8 @@ def makeFile():
     Var.new_df['Tags'] = Var.new_df['Tags'] + ", google-only, type-ignore, offline"
 
     # 寫入檔案
-    Var.new_df.to_csv(Var.fileName + '.csv', index=False, encoding='utf_8_sig')
+    FILE_ROOT = os.path.expanduser("~") + "/Downloads/" + Var.fileName + '.csv'
+    Var.new_df.to_csv(FILE_ROOT, index=False, encoding='utf_8_sig')
+    print(FILE_ROOT)
 
     return len(Var.new_df['Handle'])

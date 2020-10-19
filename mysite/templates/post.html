@@ -37,9 +37,9 @@
             <td height="55"><img src="{{i.url}}" height="50" onerror="this.parentNode.parentNode.style.color='red'"></td>
             <td width=""> {{i.handle}} </td>
             <td> {{i.title}} </td>
-            <td> <a target="_blank" href="{{i.url}}">{{i.sku}}</a></td>
+            <td> {{i.sku}}</td>
             <td> {{i.price}} </td>
-            <td> {{i.url}} </td>
+            <td> <a target="_blank" href="{{i.url}}">{{i.url}}</a> </td>
         </tr>
         {% endfor %}
         </table>
