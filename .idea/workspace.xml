@@ -93,10 +93,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1599713565342" />
-    <state x="470" y="209" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601953571336">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="-1215" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603095069527">
+      <screen x="-1920" y="2" width="1920" height="1040" />
     </state>
-    <state x="-1215" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680/-1920.2.1920.1040@-1920.2.1920.1040" timestamp="1600418378975" />
+    <state x="-1215" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680/-1920.2.1920.1040@-1920.2.1920.1040" timestamp="1603095069527" />
     <state x="470" y="209" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680/-1920.2.1920.1040@0.0.1280.680" timestamp="1601953571336" />
     <state x="502" y="88" key="EnvironmentVariablesDialog" timestamp="1599713561797">
       <screen x="0" y="0" width="1280" height="680" />
@@ -116,5 +116,16 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680/-1920.2.1920.1040@0.0.1280.680" timestamp="1601950329295" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/mysite/ads/getSheet.py</url>
+          <line>5</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

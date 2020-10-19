@@ -72,9 +72,14 @@ def makeFile():
     Var.new_df['Tags'] = [tag.replace("indexable, ", "") for tag in Var.new_df['Tags']]
     Var.new_df['Tags'] = Var.new_df['Tags'] + ", google-only, type-ignore, offline"
 
-    # 寫入檔案
-    FILE_ROOT = os.path.expanduser("~") + "/Downloads/" + Var.fileName + '.csv'
+    # 寫入檔案 C:\Users\user/Downloads/
+    FILE_ROOT = 'C:/Users/user/Downloads/'
+    #FILE_ROOT = os.path.expanduser("~") + "/Downloads/" + Var.fileName + '.csv'
     Var.new_df.to_csv(FILE_ROOT, index=False, encoding='utf_8_sig')
     print(FILE_ROOT)
+
+
+
+
 
     return len(Var.new_df['Handle'])
