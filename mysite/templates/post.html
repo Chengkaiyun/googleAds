@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Google Ads</title>
+    <title> Google Ads</title>
     <link rel="icon" href="https://cdn.shopify.com/s/files/1/0740/2335/files/google.png?v=1600419285"/>
 </head>
 <body >
@@ -20,29 +20,34 @@
 
 
     {% if messages %}
-    <ul class="messages" style="background-color: #4582AE; border-radius: 3px; color:white;padding: 10px 40px 10px 10px;" >
+    <ul class="messages" style="background-color: #4582AE; border-radius: 3px; color:white;padding: 10px 40px 10px 10px; width: 100%;" >
         {% for message in messages %}
         <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>
             {{ message }}
         </li>
+        <i class="fa fa-hand-point-right"></i>
+        <b><a target="_blank" style="color:#FFFFE0; text-decoration:none ; " href="{{SheetURL}}">表單網址</a></b>
+
         {% endfor %}
     </ul>
     {% endif %}
 
 
-    <div style="width: 100vw; overflow: auto;">
+    <div style="width: 100vw;" >
         <table>
         {% for i in url %}
-        <tr>
+        <tr style=" overflow: auto; white-space:nowrap" >
             <td height="55"><img src="{{i.url}}" height="50" onerror="this.parentNode.parentNode.style.color='red'"></td>
-            <td width=""> {{i.handle}} </td>
-            <td> {{i.title}} </td>
-            <td> {{i.sku}}</td>
-            <td> {{i.price}} </td>
-            <td> <a target="_blank" href="{{i.url}}">{{i.url}}</a> </td>
+            <td> {{i.handle}} </td>
+            <td style="padding-left:20px"> {{i.title}} </td>
+            <td style="padding-left:20px"> {{i.sku}}</td>
+            <td style="padding-left:20px"> {{i.price}} </td>
+            <td style="padding-left:20px"> <a target="_blank" href="{{i.url}}">{{i.url}}</a> </td>
         </tr>
         {% endfor %}
         </table>
     </div>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
 </body>
 </html>

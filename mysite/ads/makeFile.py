@@ -3,6 +3,7 @@ import ads.globals as Var
 import mysite.settings as Settings
 import pandas as pd
 import os
+import ads.WriteFile as wf
 
 def makeFile():
     global indexColor
@@ -73,13 +74,17 @@ def makeFile():
     Var.new_df['Tags'] = Var.new_df['Tags'] + ", google-only, type-ignore, offline"
 
     # 寫入檔案 C:\Users\user/Downloads/
+    '''
     FILE_ROOT = 'C:/Users/user/Downloads/' + Var.fileName + '.csv'
     #FILE_ROOT = os.path.expanduser("~") + "/Downloads/" + Var.fileName + '.csv'
     Var.new_df.to_csv(FILE_ROOT, index=False, encoding='utf_8_sig')
     print(FILE_ROOT)
+    '''
 
+    DataHeader = Var.new_df.columns.values.tolist()
+    DataBody = Var.new_df.fillna('').values.tolist()
+    DataBody.insert(0,DataHeader)
 
-
-
+    wf.main(Var.country, DataBody)
 
     return len(Var.new_df['Handle'])

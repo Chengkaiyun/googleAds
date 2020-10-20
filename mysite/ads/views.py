@@ -73,7 +73,8 @@ def search_post(request):
         for i in range(len(url)):
             imgUrl.append({"url": url[i], "handle": handle[i], "title": title[i], "sku": sku[i], "price": price[i]})
 
-        return render(request, "post.html", {"url": imgUrl})
+        return render(request, "post.html", {"url": imgUrl,\
+                                            "SheetURL": 'https://docs.google.com/spreadsheets/d/1u63Boe17Nvq9T1SitNA6Ht4UqLcZVYgaXqHWyAm5v6U/edit#gid=0'})
 
     else:
         return render(request, "post.html")
