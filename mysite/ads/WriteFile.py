@@ -4,6 +4,7 @@ from httplib2 import Http
 from oauth2client import file, client, tools
 
 import mysite.settings as Settings
+import os
 
 # Setup the Sheets API
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets', "https://www.googleapis.com/auth/drive.file", "https://www.googleapis.com/auth/drive"]
