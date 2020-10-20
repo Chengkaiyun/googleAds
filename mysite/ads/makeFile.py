@@ -53,7 +53,7 @@ def makeFile():
                 Var.df['Body (HTML)'][i] = SEO
 
             # SSA 要 + SEO
-            if ("airpods-case" in Var.df['Handle'][i]):
+            if ("solidsuit" in Var.df['Handle'][i]):
                 SEO = Var.countryInfo[Var.country][3]
                 Var.df['SEO Description'][i] = SEO
                 Var.df['Body (HTML)'][i] = SEO
