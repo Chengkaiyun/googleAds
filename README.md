@@ -50,9 +50,23 @@ HTML結構
 
 > `Gunicorn` 是一個用 Python 開發的 WSGI 工具，可以用來執行 Django 的網站。
 
+### Permission denied (publickey)
+請透過下列指令新增 public key，然後再重新 git push。
+
+`heroku keys:add`
+
 ## git push
 `git add .`
 
 `git commit -m "yaya"`
 
 `git push heroku master`
+
+## 網站初始化
+* 在第一次上傳專案後，我們必須稍微做一點設定，讓 Heroku 有正確的初始環境。首先用下面的指令，告訴 Heroku 我們需要一台機器（Heroku 叫 dyno）來執行網站：
+
+`heroku ps:scale web=1`
+
+* 接著用下面的指令初始化資料庫：
+
+`heroku run python mysite/manage.py migrate`
