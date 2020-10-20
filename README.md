@@ -37,3 +37,22 @@ HTML結構
 ### ads > writeFile
 將內容寫進指定表單
 
+##注意事項
+### credentials.json
+為了讓程式在上傳heroku後還是抓的到`credentials.json`，記得join路徑
+`JSON_FILE = os.path.join(Settings.BASE_DIR, "credentials.json")`
+### Procfile
+注意不能有副檔名！
+`web: gunicorn --pythonpath mysite mysite.wsgi`
+這一行指令分成兩個部分，其格式 `<process_type>: <command>` 表示：
+
+> 啟用名為 web 的應用，用 `gunicorn` 執行 `mysite.wsgi` 這個模組。
+
+> `Gunicorn` 是一個用 Python 開發的 WSGI 工具，可以用來執行 Django 的網站。
+
+## git push
+`git add .`
+
+`git commit -m "yaya"`
+
+`git push heroku master`
